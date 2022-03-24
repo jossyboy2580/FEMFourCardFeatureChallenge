@@ -9,7 +9,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 75px 75px 2px 75px;
+    gap: 50px;
 }
 
 .container {
@@ -17,13 +23,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px auto;
-    width: 375px;
 }
 
 p.tagline {
-    font-size: 1.5em;
-    color: hsl(229, 6%, 66%);
+    font-size: 1.55em;
+    font-weight: 200;
+    color: rgb(76, 78, 97);
 }
 
 h2.technology {
@@ -34,13 +39,19 @@ h2.technology {
 
 p.copy {
     text-align: center;
+    font-weight: 400;
     color: hsl(229, 6%, 66%);
-    width: 75%;
+    width: 37%;
+    font-size: .9em;
 }
 
 .cards {
-    margin-top: 30px;
-    width: 75%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 0 100px;
 }
 
 .card {
@@ -51,7 +62,7 @@ p.copy {
     box-shadow: 1px 4px 5px 5px rgb(163, 165, 174, .2);
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 2.5em;
 }
 
 .card .card-description .card-heading {
@@ -59,7 +70,8 @@ p.copy {
 }
 
 .card .card-description .card-message {
-    font-size: .9em;
+    margin-top: 10px;
+    font-size: 1em;
     color: hsl(229, 6%, 66%);
 }
 
@@ -85,16 +97,40 @@ p.copy {
     border-color: hsl(212, 86%, 64%);
 }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        padding: 35px 10px;
+    }
     .container {
-        width: 1440px;
-        padding: 50px
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .cards {
-        width: 95%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 20px;
+        padding: 0 100px;
+    }
+    p.tagline {
+        font-size: 2.2em;
+        font-weight: 200;
+        color: rgb(76, 78, 97);
+    }
+    h2.technology {
+        color: rgb(76, 78, 97);
+        margin-bottom: 15px;
+        font-size: 2.2em;
+    }
+    p.copy {
+        text-align: center;
+        font-weight: 400;
+        color: hsl(229, 6%, 66%);
+        font-size: 1.5em;
+        width: 70%;
     }
 }
